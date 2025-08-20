@@ -1,0 +1,22 @@
+<h1>Solicitud de Beca</h1>
+
+<p><b>Nombre:</b> {{nombre}}</p>
+<p><b>Cédula:</b> {{cedula}}</p>
+<p><b>Teléfono:</b> {{telefono}}</p>
+
+<h2>Adjuntos</h2>
+
+{{#if pdfNombre}}
+  <p><b>DOcumento PDF:</b> {{pdfNombre}}</p>
+{{/if}}
+
+{{#if archivos.length}}
+  <p><b>Documentos del formulario:</b></p>
+  <ul>
+    {{#each archivos}}
+      <li>{{this}}</li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p>Se adjuntan los documentos proporcionados en el formulario.</p>
+{{/if}}
